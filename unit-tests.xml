@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="com.depop.activity_tracking.SessionHandlerDefaultTest" tests="37" skipped="0" failures="0" errors="0" timestamp="2024-08-20T13:55:28" hostname="prd-linux-use1b-099267cf-c145-46ab-9909-31c80cd794ba" time="4.326">
   <properties/>
+  <testcase name="$$$ GIVEN 1 session with $$$ 50 events, WHEN flushRemovingAllSessions, $$$ THEN send 1 batch $$$" classname="$$$com.depop.activity_tracking.SessionHandlerDefaultTest" time="1.436"/>
   <testcase name="GIVEN 1 session with 50 events, WHEN flushRemovingAllSessions, THEN send 1 batch" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="1.436"/>
   <testcase name="GIVEN 4 sessions with 1 event each and success for first 2 and ServerError for last 2, WHEN flushKeepingCurrentSession, THEN delete all sent sessions and events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.149"/>
   <testcase name="GIVEN 1 session with no events WHEN flushKeepingCurrentSession THEN nothing should be sent" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.071"/>
