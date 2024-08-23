@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.depop.activity_tracking.SessionHandlerDefaultTest" tests="37" skipped="0" failures="0" errors="0" timestamp="2024-08-20T13:55:28" hostname="prd-linux-use1b-099267cf-c145-46ab-9909-31c80cd794ba" time="4.326">
+  <properties/>
+  <testcase name="GIVEN 1 session with 50 events, WHEN flushRemovingAllSessions, THEN send 1 batch" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="1.436"/>
+  <testcase name="GIVEN 4 sessions with 1 event each and success for first 2 and ServerError for last 2, WHEN flushKeepingCurrentSession, THEN delete all sent sessions and events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.149"/>
+  <testcase name="GIVEN 1 session with no events WHEN flushKeepingCurrentSession THEN nothing should be sent" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.071"/>
+  <testcase name="GIVEN 1 session with 49 events and ServerError, WHEN flushRemovingAllSessions, THEN delete sessions and events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.103"/>
+  <testcase name="GIVEN 3 sessions with no events WHEN flushRemovingAllSessions THEN nothing should be sent and sessions should be deleted" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.089"/>
+  <testcase name="WHEN flushKeepingCurrentSession is invoked, THEN the lastFlushTime is updated" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.046"/>
+  <testcase name="GIVEN 2 sessions of 51 events each, WHEN flushKeepingCurrentSession, THEN send 4 batches with all" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.196"/>
+  <testcase name="GIVEN 1 session with 101 events, WHEN flushKeepingCurrentSession, THEN send 3 batches" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.089"/>
+  <testcase name="GIVEN 4 sessions with 1 event each and success for first 2 and ServerError for last 2, WHEN flushRemovingAllSessions, THEN delete all sent sessions and events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.119"/>
+  <testcase name="GIVEN 1 session with 49 events and no connection, WHEN flushKeepingCurrentSession, THEN don't delete sessions or events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.061"/>
+  <testcase name="GIVEN 2 sessions of 51 events each, WHEN flushRemovingAllSessions, THEN send 4 batches with all" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.109"/>
+  <testcase name="GIVEN 4 sessions with 1 event each and success for first 2 and no connection for 3rd, WHEN flushKeepingCurrentSession, THEN delete only successfully sent sessions and events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.1"/>
+  <testcase name="GIVEN 1 session with 101 events, WHEN flushRemovingAllSessions, THEN send 3 batches" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.069"/>
+  <testcase name="GIVEN 1 session with 49 events, WHEN flushKeepingCurrentSession, THEN send 1 batch" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.049"/>
+  <testcase name="GIVEN 3 sessions with no events WHEN flushKeepingCurrentSession THEN nothing should be sent and sessions should be deleted" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.067"/>
+  <testcase name="GIVEN 2 sessions of 1 event each, WHEN flushRemovingAllSessions, THEN send 1 batch with all" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.065"/>
+  <testcase name="GIVEN 1 session with 49 events and InvalidPayloadFormat, WHEN flushKeepingCurrentSession, THEN delete sessions and events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.049"/>
+  <testcase name="GIVEN 2 sessions of 1 event each, WHEN flushKeepingCurrentSession, THEN send 1 batch with all" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.062"/>
+  <testcase name="GIVEN 1 session with 51 events, WHEN flushKeepingCurrentSession, THEN send 2 batches" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.078"/>
+  <testcase name="WHEN flushRemovingAllSessions is invoked, THEN the lastFlushTime is updated" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.038"/>
+  <testcase name="GIVEN current session locally, WHEN sendLatestSessionWithoutRemoving, THEN send session" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.047"/>
+  <testcase name="GIVEN 1 session with 101 events, WHEN flushRemovingAllSessions, THEN only delete userIds once" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.023"/>
+  <testcase name="GIVEN 4 sessions with 1 event each and success for first 2 and no connection for 3rd, WHEN flushRemovingAllSessions, THEN delete only successfully sent sessions and events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.144"/>
+  <testcase name="GIVEN 1 session with 49 events and ServerError, WHEN flushKeepingCurrentSession, THEN delete sessions and events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.04"/>
+  <testcase name="GIVEN 1 session with no events WHEN flushRemovingAllSessions THEN nothing should be sent" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.037"/>
+  <testcase name="GIVEN 1 session with 49 events and no connection, WHEN flushRemovingAllSessions, THEN don't delete sessions or events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.027"/>
+  <testcase name="GIVEN no session locally, WHEN sendLatestSessionWithoutRemoving, THEN don't send session" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.02"/>
+  <testcase name="GIVEN there are no sessions WHEN flushRemovingAllSessions THEN nothing should be sent" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.036"/>
+  <testcase name="GIVEN 3 sessions of 100 and 51 and 70 events, WHEN flushKeepingCurrentSession, THEN send 6 batches with all" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.209"/>
+  <testcase name="GIVEN 1 session with 49 events, WHEN flushRemovingAllSessions, THEN send 1 batch" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.042"/>
+  <testcase name="GIVEN 3 sessions of 100 and 51 and 70 events, WHEN flushRemovingAllSessions, THEN send 6 batches with all" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.141"/>
+  <testcase name="GIVEN 4 sessions with 1 event each and success for first 2 and InvalidPayloadFormat for last 2, WHEN flushRemovingAllSessions, THEN delete all sent sessions and events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.08"/>
+  <testcase name="GIVEN 1 session with 49 events and InvalidPayloadFormat, WHEN flushRemovingAllSessions, THEN delete sessions and events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.064"/>
+  <testcase name="GIVEN 1 session with 51 events, WHEN flushRemovingAllSessions, THEN send 2 batches" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.019"/>
+  <testcase name="GIVEN there are no sessions WHEN flushKeepingCurrentSession THEN nothing should be sent" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.048"/>
+  <testcase name="GIVEN 1 session with 50 events, WHEN flushKeepingCurrentSession, THEN send 1 batch" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.124"/>
+  <testcase name="GIVEN 4 sessions with 1 event each and success for first 2 and InvalidPayloadFormat for last 2, WHEN flushKeepingCurrentSession, THEN delete all sent sessions and events" classname="com.depop.activity_tracking.SessionHandlerDefaultTest" time="0.095"/>
+  <system-out><![CDATA[[MockitoHint] SessionHandlerDefaultTest.GIVEN 4 sessions with 1 event each and success for first 2 and ServerError for last 2, WHEN flushKeepingCurrentSession, THEN delete all sent sessions and events (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 1 session with no events WHEN flushKeepingCurrentSession THEN nothing should be sent (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+[MockitoHint] 2. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:85)
+[MockitoHint] 3. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:86)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 3 sessions with no events WHEN flushRemovingAllSessions THEN nothing should be sent and sessions should be deleted (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+[MockitoHint] 2. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:85)
+[MockitoHint] 3. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:86)
+
+[MockitoHint] SessionHandlerDefaultTest.WHEN flushKeepingCurrentSession is invoked, THEN the lastFlushTime is updated (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+[MockitoHint] 2. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:85)
+[MockitoHint] 3. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:86)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 2 sessions of 51 events each, WHEN flushKeepingCurrentSession, THEN send 4 batches with all (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 4 sessions with 1 event each and success for first 2 and ServerError for last 2, WHEN flushRemovingAllSessions, THEN delete all sent sessions and events (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 2 sessions of 51 events each, WHEN flushRemovingAllSessions, THEN send 4 batches with all (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 4 sessions with 1 event each and success for first 2 and no connection for 3rd, WHEN flushKeepingCurrentSession, THEN delete only successfully sent sessions and events (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+[MockitoHint] 2. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$GIVEN 4 sessions with 1 event each and success for first 2 and no connection for 3rd, WHEN flushing, THEN delete only successfully sent sessions and events$1.invokeSuspend(SessionHandlerDefaultTest.kt:801)
+[MockitoHint] 3. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$GIVEN 4 sessions with 1 event each and success for first 2 and no connection for 3rd, WHEN flushing, THEN delete only successfully sent sessions and events$1.invokeSuspend(SessionHandlerDefaultTest.kt:802)
+[MockitoHint] 4. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$GIVEN 4 sessions with 1 event each and success for first 2 and no connection for 3rd, WHEN flushing, THEN delete only successfully sent sessions and events$1.invokeSuspend(SessionHandlerDefaultTest.kt:811)
+[MockitoHint] 5. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest.produceExpectedSessions(SessionHandlerDefaultTest.kt:1031)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 3 sessions with no events WHEN flushKeepingCurrentSession THEN nothing should be sent and sessions should be deleted (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+[MockitoHint] 2. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:85)
+[MockitoHint] 3. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:86)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 2 sessions of 1 event each, WHEN flushRemovingAllSessions, THEN send 1 batch with all (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 2 sessions of 1 event each, WHEN flushKeepingCurrentSession, THEN send 1 batch with all (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+
+[MockitoHint] SessionHandlerDefaultTest.WHEN flushRemovingAllSessions is invoked, THEN the lastFlushTime is updated (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+[MockitoHint] 2. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:85)
+[MockitoHint] 3. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:86)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN current session locally, WHEN sendLatestSessionWithoutRemoving, THEN send session (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest.produceExpectedSessions(SessionHandlerDefaultTest.kt:1031)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 4 sessions with 1 event each and success for first 2 and no connection for 3rd, WHEN flushRemovingAllSessions, THEN delete only successfully sent sessions and events (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+[MockitoHint] 2. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$GIVEN 4 sessions with 1 event each and success for first 2 and no connection for 3rd, WHEN flushing, THEN delete only successfully sent sessions and events$1.invokeSuspend(SessionHandlerDefaultTest.kt:801)
+[MockitoHint] 3. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$GIVEN 4 sessions with 1 event each and success for first 2 and no connection for 3rd, WHEN flushing, THEN delete only successfully sent sessions and events$1.invokeSuspend(SessionHandlerDefaultTest.kt:802)
+[MockitoHint] 4. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$GIVEN 4 sessions with 1 event each and success for first 2 and no connection for 3rd, WHEN flushing, THEN delete only successfully sent sessions and events$1.invokeSuspend(SessionHandlerDefaultTest.kt:811)
+[MockitoHint] 5. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest.produceExpectedSessions(SessionHandlerDefaultTest.kt:1031)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 1 session with no events WHEN flushRemovingAllSessions THEN nothing should be sent (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+[MockitoHint] 2. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:85)
+[MockitoHint] 3. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:86)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN no session locally, WHEN sendLatestSessionWithoutRemoving, THEN don't send session (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+[MockitoHint] 2. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:85)
+[MockitoHint] 3. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:86)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN there are no sessions WHEN flushRemovingAllSessions THEN nothing should be sent (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+[MockitoHint] 2. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:85)
+[MockitoHint] 3. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:86)
+[MockitoHint] 4. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$GIVEN there are no sessions WHEN flushing THEN nothing should be sent$1.invokeSuspend(SessionHandlerDefaultTest.kt:95)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 3 sessions of 100 and 51 and 70 events, WHEN flushKeepingCurrentSession, THEN send 6 batches with all (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 3 sessions of 100 and 51 and 70 events, WHEN flushRemovingAllSessions, THEN send 6 batches with all (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 4 sessions with 1 event each and success for first 2 and InvalidPayloadFormat for last 2, WHEN flushRemovingAllSessions, THEN delete all sent sessions and events (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN there are no sessions WHEN flushKeepingCurrentSession THEN nothing should be sent (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+[MockitoHint] 2. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:85)
+[MockitoHint] 3. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:86)
+[MockitoHint] 4. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$GIVEN there are no sessions WHEN flushing THEN nothing should be sent$1.invokeSuspend(SessionHandlerDefaultTest.kt:95)
+
+[MockitoHint] SessionHandlerDefaultTest.GIVEN 4 sessions with 1 event each and success for first 2 and InvalidPayloadFormat for last 2, WHEN flushKeepingCurrentSession, THEN delete all sent sessions and events (see javadoc for MockitoHint):
+[MockitoHint] 1. Unused -> at com.depop.activity_tracking.SessionHandlerDefaultTest$setUp$1.invokeSuspend(SessionHandlerDefaultTest.kt:84)
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
